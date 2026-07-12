@@ -1,0 +1,12 @@
+bin/
+obj/
+**/bin/
+**/obj/
+*.user
+.vs/
+.vscode/
+.idea/
+TestResults/
+*.pdf
+appsettings.Development.json
+**/appsettings.Development.json
