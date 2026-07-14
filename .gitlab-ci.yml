@@ -18,7 +18,11 @@ build:
 test:
   stage: test
   script:
-    - dotnet test tests/OrdersApi.Tests --configuration Release --logger "console;verbosity=normal"
+    - dotnet test tests/OrdersApi.Tests --configuration Release --logger "junit;LogFilePath=test-results.xml"
+  artifacts:
+    when: always
+    reports:
+      junit: tests/OrdersApi.Tests/test-results.xml
 
 deploy:
   stage: deploy
